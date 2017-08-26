@@ -156,7 +156,7 @@ public class ImageSelectTest {
         }
 
         // Erase browsing session
-        TestHelper.floatingEraseButton.perform(click());
+//        TestHelper.floatingEraseButton.perform(click());
         TestHelper.erasedMsg.waitForExists(waitingTime);
         Assert.assertTrue(TestHelper.erasedMsg.exists());
 
@@ -196,7 +196,7 @@ public class ImageSelectTest {
         Assert.assertTrue(TestHelper.shareMenuHeader.exists());
         Assert.assertTrue(TestHelper.shareAppList.exists());
         TestHelper.pressBackKey();
-        TestHelper.floatingEraseButton.perform(click());
+//        TestHelper.floatingEraseButton.perform(click());
         TestHelper.erasedMsg.waitForExists(waitingTime);
     }
 
@@ -230,7 +230,7 @@ public class ImageSelectTest {
         savedNotification.waitForExists(waitingTime);
         Assert.assertTrue(savedNotification.exists());
         TestHelper.pressBackKey();
-        TestHelper.floatingEraseButton.perform(click());
+//        TestHelper.floatingEraseButton.perform(click());
         TestHelper.erasedMsg.waitForExists(waitingTime);
     }
 }

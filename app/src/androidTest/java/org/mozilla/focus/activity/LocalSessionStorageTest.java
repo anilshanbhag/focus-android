@@ -121,7 +121,7 @@ public class LocalSessionStorageTest {
 
         // Let's press the "erase" button and end the session
 
-        TestHelper.floatingEraseButton.perform(click());
+//        TestHelper.floatingEraseButton.perform(click());
         TestHelper.erasedMsg.waitForExists(waitingTime);
         Assert.assertTrue(TestHelper.erasedMsg.exists());
         Assert.assertTrue(TestHelper.inlineAutocompleteEditText.exists());

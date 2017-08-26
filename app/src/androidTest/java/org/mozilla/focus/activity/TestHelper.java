@@ -89,8 +89,8 @@ public final class TestHelper {
     static UiObject tryAgainBtn = mDevice.findObject(new UiSelector()
             .description("Try Again")
             .clickable(true));
-    static ViewInteraction floatingEraseButton = onView(
-            allOf(withId(R.id.erase), isDisplayed()));
+//    static ViewInteraction floatingEraseButton = onView(
+//            allOf(withId(R.id.erase), isDisplayed()));
     static UiObject notFoundMsg = mDevice.findObject(new UiSelector()
             .description("The address wasn’t understood")
             .enabled(true));

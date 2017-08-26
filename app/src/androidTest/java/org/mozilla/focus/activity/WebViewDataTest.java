@@ -170,7 +170,7 @@ public class WebViewDataTest {
         assertTrue("Service worker installed", serviceWorkerMsg.exists());
 
         // Erase browsing session
-        TestHelper.floatingEraseButton.perform(click());
+//        TestHelper.floatingEraseButton.perform(click());
         TestHelper.erasedMsg.waitForExists(waitingTime);
         Assert.assertTrue(TestHelper.erasedMsg.exists());
         Assert.assertTrue(TestHelper.inlineAutocompleteEditText.exists());

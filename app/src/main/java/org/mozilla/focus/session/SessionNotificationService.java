@@ -58,8 +58,8 @@ public class SessionNotificationService extends Service {
 
         switch (action) {
             case ACTION_START:
-                createNotificationChannelIfNeeded();
-                startForeground(NOTIFICATION_ID, buildNotification());
+//                createNotificationChannelIfNeeded();
+//                startForeground(NOTIFICATION_ID, buildNotification());
                 break;
 
             case ACTION_ERASE:

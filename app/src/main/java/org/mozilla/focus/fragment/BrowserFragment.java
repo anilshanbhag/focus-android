@@ -44,7 +44,7 @@ import android.widget.Toast;
 
 import org.mozilla.focus.R;
 import org.mozilla.focus.activity.InfoActivity;
-import org.mozilla.focus.activity.InstallFirefoxActivity;
+//import org.mozilla.focus.activity.InstallFirefoxActivity;
 import org.mozilla.focus.animation.TransitionDrawableGroup;
 import org.mozilla.focus.architecture.NonNullObserver;
 import org.mozilla.focus.broadcastreceiver.DownloadBroadcastReceiver;
@@ -324,8 +324,8 @@ public class BrowserFragment extends WebFragment implements View.OnClickListener
     }
 
     private void initialiseNormalBrowserUi(final @NonNull View view) {
-        final View erase = view.findViewById(R.id.erase);
-        erase.setOnClickListener(this);
+//        final View erase = view.findViewById(R.id.erase);
+//        erase.setOnClickListener(this);
 
         urlView.setOnClickListener(this);
     }
@@ -339,9 +339,9 @@ public class BrowserFragment extends WebFragment implements View.OnClickListener
         // - View.GONE: doesn't work because the layout-behaviour makes the FAB visible again when scrolling.
         // - Adding at runtime: works, but then we need to use a separate layout file (and you need
         //   to set some attributes programatically, same as ViewStub).
-        final View erase = view.findViewById(R.id.erase);
-        final ViewGroup eraseContainer = (ViewGroup) erase.getParent();
-        eraseContainer.removeView(erase);
+//        final View erase = view.findViewById(R.id.erase);
+//        final ViewGroup eraseContainer = (ViewGroup) erase.getParent();
+//        eraseContainer.removeView(erase);
 
         final int textColor;
 
@@ -738,12 +738,12 @@ public class BrowserFragment extends WebFragment implements View.OnClickListener
                         .commit();
                 break;
 
-            case R.id.erase: {
-                erase();
-
-                TelemetryWrapper.eraseEvent();
-                break;
-            }
+//            case R.id.erase: {
+//                erase();
+//
+//                TelemetryWrapper.eraseEvent();
+//                break;
+//            }
 
             case R.id.back: {
                 goBack();
@@ -804,20 +804,20 @@ public class BrowserFragment extends WebFragment implements View.OnClickListener
                 break;
             }
 
-            case R.id.open_firefox: {
-                final Browsers browsers = new Browsers(getContext(), getUrl());
-
-                if (browsers.hasFirefoxBrandedBrowserInstalled()) {
-                    final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getUrl()));
-                    intent.setPackage(browsers.getFirefoxBrandedBrowser().packageName);
-                    startActivity(intent);
-                } else {
-                    InstallFirefoxActivity.open(getContext());
-                }
-
-                TelemetryWrapper.openFirefoxEvent();
-                break;
-            }
+//            case R.id.open_firefox: {
+//                final Browsers browsers = new Browsers(getContext(), getUrl());
+//
+//                if (browsers.hasFirefoxBrandedBrowserInstalled()) {
+//                    final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getUrl()));
+//                    intent.setPackage(browsers.getFirefoxBrandedBrowser().packageName);
+//                    startActivity(intent);
+//                } else {
+//                    InstallFirefoxActivity.open(getContext());
+//                }
+//
+//                TelemetryWrapper.openFirefoxEvent();
+//                break;
+//            }
 
             case R.id.open_select_browser: {
                 final Browsers browsers = new Browsers(getContext(), getUrl());

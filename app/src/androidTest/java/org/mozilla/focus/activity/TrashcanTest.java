@@ -71,7 +71,7 @@ public class TrashcanTest {
         TestHelper.webView.waitForExists(waitingTime);
 
         // Press erase button, and check for message and return to the main page
-        TestHelper.floatingEraseButton.perform(click());
+//        TestHelper.floatingEraseButton.perform(click());
         TestHelper.erasedMsg.waitForExists(waitingTime);
         assertTrue(TestHelper.erasedMsg.exists());
         assertTrue(TestHelper.inlineAutocompleteEditText.exists());

@@ -116,17 +116,7 @@ public final class TelemetryWrapper {
     }
 
     public static boolean isTelemetryEnabled(Context context) {
-        // The first access to shared preferences will require a disk read.
-        final StrictMode.ThreadPolicy threadPolicy = StrictMode.allowThreadDiskReads();
-        try {
-            final Resources resources = context.getResources();
-            final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-
-            return preferences.getBoolean(resources.getString(R.string.pref_key_telemetry), isEnabledByDefault())
-                    && !AppConstants.isDevBuild();
-        } finally {
-            StrictMode.setThreadPolicy(threadPolicy);
-        }
+        return false;
     }
 
     public static void setTelemetryEnabled(Context context, boolean enabled) {
@@ -144,7 +134,7 @@ public final class TelemetryWrapper {
     }
 
     private static boolean isEnabledByDefault() {
-        return !AppConstants.isKlarBuild();
+        return false;
     }
 
     public static void init(Context context) {
